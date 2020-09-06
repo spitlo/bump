@@ -99,19 +99,19 @@ async function tagExists(version: string) {
 }
 
 async function gitCommit(version: string, projectName: string) {
-  let cmd = run({
+  const addCmd: any = run({
     cmd: ["git", "add", "."],
   });
 
-  await cmd.status();
-  cmd.close();
+  await addCmd.status();
+  addCmd.close();
 
-  cmd = run({
+  const commitCmd = run({
     cmd: ["git", "commit", "-m", `release: ${projectName}@${v(version)}`],
   });
 
-  await cmd.status();
-  cmd.close();
+  await commitCmd.status();
+  commitCmd.close();
 }
 
 async function createTag(version: string, signGitTag = false) {
