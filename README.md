@@ -5,7 +5,7 @@
 This is my personal tool for versioning Deno projects. You might find it useful as well.
 
 ```sh
-$ deno install --allow-read --allow-write --allow-run -n bump https://denopkg.com/spitlo/bump@v2.0.0/cli.ts
+deno install --allow-read --allow-write --allow-run -n bump https://raw.githubusercontent.com/spitlo/bump/master/cli.ts
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ Add a `project.json` to the root of your project:
 
 Run `bump` in the root of your project:
 ```sh
-$ bump major
+bump major
 ```
 
 This will:
